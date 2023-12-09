@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh; 
+    background-color: #161624;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 80px;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.container small {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.clock {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border: 2px solid #892be2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 5px #892be2;
+}
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.clock span {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.clock span:nth-child(1) {
+    transform: rotate(30deg);
+}
+.clock span:nth-child(2) {
+    transform: rotate(60deg);
+}
+.clock span:nth-child(3) {
+    transform: rotate(90deg);
+}
+.clock span:nth-child(4) {
+    transform: rotate(120deg);
+}
+.clock span:nth-child(5) {
+    transform: rotate(150deg);
+}
+.clock span:nth-child(6) {
+    transform: rotate(180deg);
+}
+.clock span:nth-child(7) {
+    transform: rotate(210deg);
+}
+.clock span:nth-child(8) {
+    transform: rotate(240deg);
+}
+.clock span:nth-child(9) {
+    transform: rotate(270deg);
+}
+.clock span:nth-child(10) {
+    transform: rotate(300deg);
+}
+.clock span:nth-child(11) {
+    transform: rotate(330deg);
+}
+.clock span:nth-child(12) {
+    transform: rotate(0deg);
+}
+
+.clock .hours,
+.minutes, .seconds {
+    position: absolute;
+    bottom: 50%;
+    background-color: #892be2;
+    border-radius: 20px;
+    transform-origin: bottom;
+}
+
+.clock .hours {
+    width: 6px;
+    height: 30%;
+    z-index: 1;
+}
+
+.clock .minutes {
+    width: 6px;
+    height: 40%;
+    z-index: 2;
+}
+
+.clock .seconds {
+    width: 6px;
+    height: 45%;
+    z-index: 3; 
+}   
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.content h3 {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.5px;
+}   
+
+.content .select-box {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.content .select-box.disable {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.content .select-box select {
+    flex: 1 1 100px;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #892be2;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.content .select-box select.error {
+    border: 2px solid #ff0000;
+}
+.content .select-box select.success {
+    border: 2px solid #00ff00;
+}
+
+.content .select-box select option {
+    color: #000;
+}
+
+.content p {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.content button {
+    display: inline-block;
+    width: 150px;
+    height: 48px;
+    background-color: #892be2;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}   
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        gap:  20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .clock {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 340px) {
+    .clock {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    .clock span,
+    .container small {
+        font-size: 13px;
+    }
+
+    .clock .hours,
+    .clock .minutes, 
+    .clock .seconds {
+        width: 5px;
+    }
+
+    .clock::before {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    .content h3 {
+        font-size: 22px;
+    }
+
+    .content .select-box select,
+    .content p {
+        font-size: 13px;
+    }
+}   

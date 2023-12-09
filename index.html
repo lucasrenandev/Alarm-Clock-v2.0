@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alarm Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------------------------CSS link----------------------------------->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <div class="clock">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span>11</span>
+                <span>12</span>
+                <div class="hours"></div>
+                <div class="minutes"></div>
+                <div class="seconds"></div>
+            </div><!--end clock-->
+            <small class="date-text"></small>
+        </div><!--end container-->
+        <div class="content">
+            <h3>Set an Alarm</h3>
+            <div class="select-box">
+                <select>
+                    <option value="Day" selected hidden>Day</option>
+                </select>
+                <select>
+                    <option value="Hour" selected hidden>Hour</option>
+                </select>
+                <select>
+                    <option value="Minute" selected hidden>Minute</option>
+                </select>
+                <select>
+                    <option value="Period" selected hidden>AM/PM</option>
+                </select>
+            </div><!--end select box-->
+            <p class="info"></p>
+            <button type="button">Set alarm</button>
+        </div><!--end content-->
+    </section><!--end hero-->
+    <!------------------------------JavaScript link----------------------------------->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
